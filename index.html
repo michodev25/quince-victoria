@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Nair Alexandra - Mis 15 Años</title>
+<title>Nair Alexandra - Mis XV Años</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -15,8 +15,16 @@
         theme: {
           extend: {
             colors: {
-              primary: "#D48B99",secondary: "#8B6B75","background-light": "#FFF5F7","background-dark": "#2D1B22","card-light": "#ffffff",
+              primary: "#D48B99",
+              secondary: "#5BA3D9",
+              "background-light": "#F2E8D5",
+              "background-dark": "#2D1B22",
+              "card-light": "#ffffff",
               "card-dark": "#3D2630",
+              "sky-accent": "#87CEEB",
+              "sky-medium": "#5BA3D9",
+              "sky-light": "#A8D8EA",
+              "sky-pale": "#D4EFFC",
             },
             fontFamily: {
               display: ["'Great Vibes'", "cursive"],serif: ["'Playfair Display'", "serif"],sans: ["'Montserrat'", "sans-serif"],},
@@ -25,7 +33,7 @@
               "arch": "100px 100px 0 0",
             },
             backgroundImage: {
-                'floral-pattern': "url('assets/floral_pattern.jpg')",
+                'alice-pattern': "url('alicia/photo_2026-02-24_16-08-28.jpg')",
             }
           },
         },
@@ -46,16 +54,92 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }.timeline-line::before {
+        }
+        .timeline-line::before {
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
             left: 50%;
             width: 2px;
-            background-color: #D48B99;
+            background-color: #87CEEB;
             transform: translateX(-50%);
             z-index: 0;
+        }
+        /* Rose corner decorations */
+        .section-rose {
+            position: relative;
+        }
+        .section-rose::after {
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .rose-top-right::after {
+            top: -8px; right: -8px;
+            background-image: url('alicia/Rosas/photo_1_2026-02-24_15-35-43-removebg-preview.png');
+        }
+        .rose-bottom-left::after {
+            bottom: -8px; left: -8px;
+            background-image: url('alicia/Rosas/ilustración-artística-de-rosas-rojas-sobre-libros-antiguos-en-un-estilo-vintage-generado-por-ai-332251505-removebg-preview.png');
+        }
+        .rose-top-left::after {
+            top: -8px; left: -8px;
+            background-image: url('alicia/Rosas/photo_1_2026-02-24_15-35-43-removebg-preview.png');
+            transform: scaleX(-1);
+        }
+        .rose-bottom-right::after {
+            bottom: -8px; right: -8px;
+            background-image: url('alicia/Rosas/ilustración-artística-de-rosas-rojas-sobre-libros-antiguos-en-un-estilo-vintage-generado-por-ai-332251505-removebg-preview.png');
+            transform: scaleX(-1);
+        }
+        /* Decorative dividers between sections */
+        .section-divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 0;
+            gap: 12px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .section-divider img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
+        }
+        .section-divider .divider-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #87CEEB, transparent);
+        }
+        main.main-bg-container {
+            position: relative;
+        }
+        main.main-bg-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('photo_7_2026-02-24_15-35-43.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 5px rgba(255,255,255,0.5);
+        }
+        .dark .text-glow {
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
     </style>
 <style>
@@ -64,23 +148,23 @@
     }
   </style>
   </head>
-<body class="bg-background-light dark:bg-background-dark text-gray-700 dark:text-gray-200 font-sans antialiased selection:bg-primary selection:text-white transition-colors duration-300">
+<body class="bg-alice-pattern bg-fixed bg-repeat text-gray-700 dark:text-gray-200 font-sans antialiased selection:bg-sky-accent selection:text-white transition-colors duration-300">
 <script>
 var currentLang = 'es';
 var translations = {
   en: {
-    overlay_title: 'My <span class="text-7xl">15th</span> Birthday',
+    overlay_title: 'My <span class="font-display text-gray-700">XV</span> Birthday',
     overlay_tap: 'Tap to open the invitation',
-    header_title: 'My <span class="text-4xl">15th</span> Birthday',
+    header_title: 'My <span class="text-4xl text-sky-medium">XV</span> Birthday',
     event_date: 'Saturday, April 4, 2026',
     days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds',
-    intro_text: 'By order of Her Majesty the Queen, you are respectfully invited to the solemn and distinguished celebration of the 15th birthday of Miss Nair Alexandra, who will be presented in society in a ceremony of great honor and elegance.',
-    intro_title: 'The princess\' 15th birthday.',
+    intro_text: 'By order of Her Majesty the Queen, you are respectfully invited to the solemn and distinguished celebration of the XV birthday of Miss Nair Alexandra, who will be presented in society in a ceremony of great honor and elegance.',
+    intro_title: 'The princess\' XV birthday.',
     intro_blessing: 'Your honorable presence will be deeply appreciated and will add greater splendor to this most significant occasion for the honoree and her family.',
     parents_title: 'My parents:',
     godparents_title: 'My godparents:',
     invite_text: 'We are pleased to invite you to be part of this great day.',
-    where_title: 'Where & Schedule',
+    where_title: 'Place & Schedule',
     where_subtitle: 'Ceremony & Reception',
     ceremony_time: 'Event: 6:30 pm',
     view_map: 'View Map',
@@ -93,7 +177,7 @@ var translations = {
     afterparty: 'After the formal celebration, you are cordially invited to continue the party at our home for a more intimate gathering.<br/><strong>Address: 13201 SW 197th Ave<br/>Miami, FL 33196</strong>',
     dresscode_title: 'Dress Code',
     dresscode_formal: 'Formal',
-    dresscode_note: 'The color <span class="text-primary font-bold">light blue</span> is reserved<br/>for the Quinceañera',
+    dresscode_note: 'The color <span class="text-sky-medium font-bold">light blue</span> is reserved<br/>for the Quinceañera',
     gifts_title: 'Gifts',
     gifts_envelopes: '"Cash gifts"',
     rsvp_title: 'RSVP',
@@ -102,18 +186,18 @@ var translations = {
     footer_thanks: 'Thank you for joining me on<br/>this very special day!'
   },
   es: {
-    overlay_title: 'Mis <span class="text-7xl">15</span> Años',
+    overlay_title: 'Mis <span class="text-7xl">XV</span> Años',
     overlay_tap: 'Toca para abrir la invitación',
-    header_title: 'Mis <span class="text-4xl">15</span> Años',
+    header_title: 'Mis <span class="text-4xl text-primary">XV</span> Años',
     event_date: 'Sábado, 4 de abril de 2026',
     days: 'Días', hours: 'Horas', minutes: 'Minutos', seconds: 'Segundos',
-    intro_text: 'Por orden de Su Majestad la reina, queda usted invitado respetuosamente a la solemne y distinguida celebración de los 15 años de la señorita Nair Alexandra, quien será presentada en sociedad en una ceremonia de gran honor y elegancia.',
-    intro_title: 'Los 15 de la princesa.',
+    intro_text: 'Por orden de Su Majestad la reina, queda usted invitado respetuosamente a la solemne y distinguida celebración de los XV años de la señorita Nair Alexandra, quien será presentada en sociedad en una ceremonia de gran honor y elegancia.',
+    intro_title: 'Los XV de la princesa.',
     intro_blessing: 'Su honorable presencia será profundamente apreciada y otorgará mayor realce a esta ocasión tan significativa para la homenajeada y su familia.',
     parents_title: 'Mis padres:',
     godparents_title: 'Mis padrinos:',
     invite_text: 'Nos complace invitarte a ser parte de este gran día.',
-    where_title: 'Donde & Horario',
+    where_title: 'Lugar & Horario',
     where_subtitle: 'Ceremonia y Recepción',
     ceremony_time: 'Evento: 6:30 p.m.',
     view_map: 'Ver Mapa',
@@ -147,7 +231,7 @@ function switchLang(lang) {
       }
     }
   });
-  var active = 'px-3 py-1 rounded-full text-sm font-semibold bg-primary text-white shadow transition';
+  var active = 'px-3 py-1 rounded-full text-sm font-semibold bg-sky-500 text-white shadow transition';
   var inactive = 'px-3 py-1 rounded-full text-sm font-semibold bg-white/60 dark:bg-card-dark/60 text-gray-600 dark:text-gray-300 shadow transition';
   ['lang-es-btn','float-es-btn'].forEach(function(id) {
     var b = document.getElementById(id); if (b) b.className = lang === 'es' ? active : inactive;
@@ -157,18 +241,21 @@ function switchLang(lang) {
   });
 }
 </script>
+
+<!-- Welcome Overlay -->
 <div id="welcome-overlay" class="fixed inset-0 z-50 bg-background-light dark:bg-background-dark flex flex-col items-center justify-center cursor-pointer" onclick="enterSite()">
 <div class="absolute top-6 right-6 flex gap-2" onclick="event.stopPropagation()">
-<button onclick="switchLang('es')" id="lang-es-btn" class="px-3 py-1 rounded-full text-sm font-semibold bg-primary text-white shadow transition">ES</button>
+<button onclick="switchLang('es')" id="lang-es-btn" class="px-3 py-1 rounded-full text-sm font-semibold bg-sky-500 text-white shadow transition">ES</button>
 <button onclick="switchLang('en')" id="lang-en-btn" class="px-3 py-1 rounded-full text-sm font-semibold bg-white/60 dark:bg-card-dark/60 text-gray-600 dark:text-gray-300 shadow transition">EN</button>
 </div>
-<h2 class="font-display text-5xl text-primary mb-4 animate-pulse" data-i18n="overlay_title" data-i18n-html="true">Mis <span class="text-7xl">15</span> Años</h2>
+<h2 class="font-display text-5xl text-gray-700 dark:text-gray-200 mb-4 animate-pulse" data-i18n="overlay_title" data-i18n-html="true">Mis <span class="text-7xl">XV</span> Años</h2>
 <p class="font-serif text-gray-600 dark:text-gray-300 mb-8 italic">Nair Alexandra</p>
-<div class="bg-primary text-white rounded-full p-4 shadow-lg animate-bounce">
+<div class="bg-sky-accent text-white rounded-full p-4 shadow-lg animate-bounce">
 <span class="material-icons text-4xl">play_arrow</span>
 </div>
 <p class="text-sm text-gray-500 dark:text-gray-400 mt-4" data-i18n="overlay_tap">Toca para abrir la invitación</p>
 </div>
+
 <script>
 function enterSite() {
   var overlay = document.getElementById('welcome-overlay');
@@ -181,32 +268,36 @@ function enterSite() {
   document.getElementById('lang-float').style.display = 'flex';
 }
 </script>
+
+<!-- Side floral decor -->
 <div class="fixed top-20 left-0 w-24 h-48 pointer-events-none z-0 opacity-40 dark:opacity-20 hidden md:block">
 <img alt="Floral decor" class="object-cover w-full h-full rounded-r-full blur-[1px]" src="assets/decor_1.png"/>
 </div>
 <div class="fixed bottom-40 right-0 w-32 h-64 pointer-events-none z-0 opacity-40 dark:opacity-20 hidden md:block">
 <img alt="Floral decor" class="object-cover w-full h-full rounded-l-full blur-[1px]" src="assets/decor_2.png"/>
 </div>
+
+<!-- Main Content -->
 <div class="max-w-md mx-auto relative z-10 shadow-2xl overflow-hidden bg-background-light dark:bg-background-dark min-h-screen">
 <header class="relative pt-12 pb-8 px-6 text-center">
 <div class="relative w-48 h-64 mx-auto mb-6">
-<div class="w-full h-full arch-mask overflow-hidden border-4 border-white dark:border-card-dark shadow-lg relative z-10">
-<img alt="Quinceañera in pink dress" class="w-full h-full object-cover" src="assets/quinceanera_main.png"/>
+<div class="w-full h-full arch-mask overflow-hidden border-4 border-sky-pale dark:border-card-dark shadow-lg relative z-10">
+<img alt="Quinceañera" class="w-full h-full object-cover" src="assets/quinceanera_main.png"/>
 </div>
-<div class="absolute -bottom-4 -right-4 w-16 h-16 bg-primary/20 rounded-full blur-xl z-0"></div>
-<div class="absolute -top-4 -left-4 w-16 h-16 bg-primary/20 rounded-full blur-xl z-0"></div>
+<div class="absolute -bottom-4 -right-4 w-16 h-16 bg-sky-accent/20 rounded-full blur-xl z-0"></div>
+<div class="absolute -top-4 -left-4 w-16 h-16 bg-sky-accent/20 rounded-full blur-xl z-0"></div>
 </div>
-<h2 class="text-2xl font-serif text-gray-800 dark:text-gray-100 uppercase tracking-widest mb-1 scroll-reveal" style="animation-delay: 0.2s;" data-i18n="header_title" data-i18n-html="true">Mis <span class="text-4xl font-display text-primary">15</span> Años</h2>
-<h1 class="text-6xl font-display text-primary dark:text-primary mb-6 scroll-reveal leading-tight" style="animation-delay: 0.4s;">Nair Alexandra</h1>
+<h2 class="text-2xl font-serif text-gray-800 dark:text-gray-100 uppercase tracking-widest mb-1 scroll-reveal" style="animation-delay: 0.2s;" data-i18n="header_title" data-i18n-html="true">Mis <span class="text-4xl font-display text-sky-accent">XV</span> Años</h2>
+<h1 class="text-6xl font-display text-sky-accent dark:text-sky-accent mb-6 scroll-reveal leading-tight" style="animation-delay: 0.4s;">Nair Alexandra</h1>
 <audio id="bg-music" src="assets/Alice-s-Theme-From-Alice-in-Wonderland-Soundtrack-Version.m4a" loop preload="auto"></audio>
-<div class="bg-white/50 dark:bg-card-dark/50 backdrop-blur-sm rounded-full p-3 mx-4 mb-8 flex items-center justify-between shadow-sm scroll-reveal" style="animation-delay: 0.5s;">
-<button class="text-gray-500 dark:text-gray-400 hover:text-primary" onclick="document.getElementById('bg-music').currentTime=0"><span class="material-icons">replay</span></button>
-<button class="text-gray-500 dark:text-gray-400 hover:text-primary" onclick="document.getElementById('bg-music').currentTime=Math.max(0,document.getElementById('bg-music').currentTime-10)"><span class="material-icons">skip_previous</span></button>
-<button id="play-btn" class="bg-primary text-white rounded-full p-2 shadow-md hover:bg-opacity-90 transition transform hover:scale-105" onclick="toggleMusic()">
+<div class="bg-sky-pale/50 dark:bg-card-dark/50 backdrop-blur-sm rounded-full p-3 mx-4 mb-8 flex items-center justify-between shadow-sm scroll-reveal" style="animation-delay: 0.5s;">
+<button class="text-gray-500 dark:text-gray-400 hover:text-sky-medium" onclick="document.getElementById('bg-music').currentTime=0"><span class="material-icons">replay</span></button>
+<button class="text-gray-500 dark:text-gray-400 hover:text-sky-medium" onclick="document.getElementById('bg-music').currentTime=Math.max(0,document.getElementById('bg-music').currentTime-10)"><span class="material-icons">skip_previous</span></button>
+<button id="play-btn" class="bg-sky-accent text-white rounded-full p-2 shadow-md hover:bg-opacity-90 transition transform hover:scale-105" onclick="toggleMusic()">
 <span id="play-icon" class="material-icons text-2xl">play_arrow</span>
 </button>
-<button class="text-gray-500 dark:text-gray-400 hover:text-primary" onclick="document.getElementById('bg-music').currentTime=Math.min(document.getElementById('bg-music').duration,document.getElementById('bg-music').currentTime+10)"><span class="material-icons">skip_next</span></button>
-<button id="mute-btn" class="text-gray-500 dark:text-gray-400 hover:text-primary" onclick="toggleMute()"><span id="mute-icon" class="material-icons">volume_up</span></button>
+<button class="text-gray-500 dark:text-gray-400 hover:text-sky-medium" onclick="document.getElementById('bg-music').currentTime=Math.min(document.getElementById('bg-music').duration,document.getElementById('bg-music').currentTime+10)"><span class="material-icons">skip_next</span></button>
+<button id="mute-btn" class="text-gray-500 dark:text-gray-400 hover:text-sky-medium" onclick="toggleMute()"><span id="mute-icon" class="material-icons">volume_up</span></button>
 </div>
 <script>
 function toggleMusic() {
@@ -226,7 +317,6 @@ function toggleMute() {
   audio.muted = !audio.muted;
   icon.textContent = audio.muted ? 'volume_off' : 'volume_up';
 }
-
 </script>
 <div class="text-center mb-10 scroll-reveal" style="animation-delay: 0.6s;">
 <span class="material-icons text-3xl mb-2 text-gray-800 dark:text-gray-200">calendar_month</span>
@@ -247,7 +337,7 @@ function toggleMute() {
 <span class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400" data-i18n="minutes">Minutos</span>
 </div>
 <span class="text-2xl pt-1">:</span>
-<div class="flex flex-col text-primary">
+<div class="flex flex-col text-sky-medium">
 <span id="countdown-seconds" class="text-3xl font-bold">--</span>
 <span class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400" data-i18n="seconds">Segundos</span>
 </div>
@@ -280,249 +370,288 @@ function toggleMute() {
 </script>
 </div>
 </header>
-<main class="px-6 space-y-16 pb-20">
-<section class="text-center relative">
-<span class="material-icons absolute -top-4 right-4 text-primary opacity-60 transform rotate-12">filter_vintage</span>
-<p class="font-sans text-sm md:text-base leading-relaxed text-gray-600 dark:text-gray-300 mb-4 px-4" data-i18n="intro_text">
-                    Por orden de Su Majestad la reina, queda usted invitado respetuosamente a la solemne y distinguida celebración de los 15 años de la señorita Nair Alexandra, quien será presentada en sociedad en una ceremonia de gran honor y elegancia.
-                </p>
-<h3 class="font-display text-4xl text-primary dark:text-primary mb-6" data-i18n="intro_title">Los 15 de la princesa.</h3>
-<p class="font-serif italic text-lg text-gray-700 dark:text-gray-200 px-2" data-i18n="intro_blessing">
-                    Su honorable presencia será profundamente apreciada y otorgará mayor realce a esta ocasión tan significativa para la homenajeada y su familia.
-                </p>
+
+<main class="px-6 space-y-16 pb-20 main-bg-container">
+
+<!-- Invitation Section -->
+<section class="text-center space-y-6 bg-background-light/40 dark:bg-card-dark/30 py-10 rounded-3xl backdrop-blur-sm shadow-sm section-rose rose-bottom-left px-4">
+    <p class="font-sans text-sm md:text-lg leading-relaxed text-gray-800 dark:text-gray-100 text-glow" data-i18n="intro_text">
+        Por orden de Su Majestad la reina, queda usted invitado  a la solemne y distinguida celebración de los 15 años de la Señorita Nair Alexandra, quien será presentada en sociedad en una ceremonia de gran honor y elegancia.
+    </p>
 </section>
-<section class="text-center space-y-8 bg-white/40 dark:bg-card-dark/30 py-8 rounded-3xl backdrop-blur-sm shadow-sm">
-<div>
-<h4 class="font-display text-3xl text-primary dark:text-primary mb-3" data-i18n="parents_title">Mis padres:</h4>
-<p class="font-serif text-gray-800 dark:text-gray-100">Paola Bodden &amp; Fabian Velasquez</p>
-<p class="font-serif text-gray-600 dark:text-gray-400 text-sm mt-1">Jose Carrera</p>
+
+<div class="flex justify-center mt-6 opacity-95">
+    <img alt="Bow Decor" class="h-auto max-w-full" style="width: 30rem;" src="assets/lazo-removebg-preview.png"/>
 </div>
-<div>
-<h4 class="font-display text-3xl text-primary dark:text-primary mb-3" data-i18n="godparents_title">Mis padrinos:</h4>
-<p class="font-serif text-gray-800 dark:text-gray-100">Adriana Ayala,</p>
-<p class="font-serif text-gray-800 dark:text-gray-100">Mario &amp; America De Santiago</p>
-</div>
-<div class="pt-4">
-<p class="font-display text-3xl text-gray-700 dark:text-gray-200 transform -rotate-2" data-i18n="invite_text">
-                        La familia real esta complacida de invitarte a ser parte de este gran día.
-                    </p>
-</div>
-<div class="flex justify-center opacity-50">
-<img alt="decoration" class="w-16 h-auto opacity-30 dark:invert" src="assets/decoration_small.png"/>
-</div>
+
+<section class="flex justify-center px-6 mt-8 mb-4">
+  <div class="bg-opacity-90 dark:bg-card-dark/50 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden max-w-xs border border-primary/20">
+    <img alt="Alice in Wonderland postcard" class="w-full h-auto object-contain" src="b0068c32-e050-4cad-a527-ecbb9f766990-removebg-preview.png"/>
+  </div>
 </section>
-<section class="text-center">
-<h3 class="font-display text-5xl text-gray-800 dark:text-gray-100 mb-2" data-i18n="where_title">Donde &amp; Horario</h3>
-<p class="font-serif italic text-gray-600 dark:text-gray-400 mb-8" data-i18n="where_subtitle">Recepción y Ceremonia Religiosa</p>
-<div class="bg-white dark:bg-card-dark p-6 rounded-2xl shadow-lg border border-primary/20 relative overflow-hidden group">
+
+<!-- Where & Schedule -->
+<section class="text-center section-rose rose-top-left">
+<h3 class="font-display text-5xl text-gray-800 dark:text-gray-100 mb-2 text-glow" data-i18n="where_title">Lugar &amp; Horario</h3>
+<p class="font-serif italic text-gray-600 dark:text-gray-400 mb-8" data-i18n="where_subtitle">Ceremonia y Recepción</p>
+<div class="bg-background-light dark:bg-card-dark p-6 rounded-2xl shadow-lg opacity-95 border-sky-accent/30 relative overflow-hidden group">
 <div class="mb-4 text-gray-800 dark:text-gray-100">
 <span class="material-symbols-outlined text-6xl font-light">home</span>
 </div>
 <h4 class="font-serif font-bold text-lg text-gray-800 dark:text-white">Tipsi Place</h4>
 <p class="text-gray-600 dark:text-gray-300 mt-1">13201 SW 197th Ave</p>
 <p class="text-gray-600 dark:text-gray-300">Miami, FL 33196</p>
-<div class="mt-4 flex justify-center gap-4 text-sm font-medium text-primary">
+<div class="mt-4 flex justify-center gap-4 text-sm font-medium text-sky-medium">
 <span data-i18n="ceremony_time">Evento: 6:30 p.m.</span>
 </div>
-<a class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-[#D48B99] to-[#C07A88] text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1" href="https://www.google.com/maps/search/?api=1&query=Tipsi+Place+13201+SW+197th+Ave+Miami+FL+33196" target="_blank">
+<a class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-sky-accent to-sky-medium text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1" href="https://www.google.com/maps/search/?api=1&query=Tipsi+Place+13201+SW+197th+Ave+Miami+FL+33196" target="_blank">
 <span data-i18n="view_map">Ver Mapa</span>
 <span class="material-icons text-sm">near_me</span>
 </a>
 </div>
 </section>
-<section class="text-center">
-<h3 class="font-serif text-2xl text-gray-800 dark:text-gray-100 mb-8" data-i18n="details_title" data-i18n-html="true">Te compartimos los<br/>detalles de la celebración</h3>
+
+<!-- Divider 3: Roses + Cards -->
+<div class="section-divider">
+  <span class="divider-line"></span>
+  <img alt="" src="alicia/Rosas/pngtree-two-roses-png-image_6579333.png" style="height:42px;transform:rotate(5deg);"/>
+  <img alt="" src="alicia/Cartas/photo_2026-02-24_15-35-45-removebg-preview.png" style="height:38px;transform:rotate(-3deg);"/>
+  <img alt="" src="alicia/Rosas/pngtree-two-roses-png-image_6579333.png" style="height:42px;transform:rotate(-5deg) scaleX(-1);"/>
+  <span class="divider-line"></span>
+</div>
+
+<!-- Timeline -->
+<section class="text-center section-rose rose-bottom-right">
+<h3 class="font-serif text-2xl text-gray-800 dark:text-gray-100 mb-8 text-glow" data-i18n="details_title" data-i18n-html="true">Te compartimos los<br/>detalles de la celebración</h3>
 <div class="relative py-4 timeline-line">
 <div class="relative z-10 grid grid-cols-2 gap-8 items-center mb-12">
-<div class="text-right">
-<span class="block font-bold text-primary text-lg">3pm - 4pm</span>
-<span class="block text-gray-600 dark:text-gray-300 font-serif" data-i18n="timeline_mass">Misa</span>
+<div class="text-right pr-2">
+  <span class="inline-block font-serif italic text-sky-medium text-sm leading-snug bg-background-light/85 dark:bg-background-dark/80 backdrop-blur-sm rounded-xl px-3 py-2 shadow-sm">&ldquo;Esta noche nada<br/>es lo que parece...&rdquo;</span>
 </div>
 <div class="text-left pl-4">
-<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">church</span>
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-sky-accent rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sky-medium">moon_stars</span>
 </div>
 </div>
 </div>
 <div class="relative z-10 grid grid-cols-2 gap-8 items-center mb-12">
 <div class="text-right flex justify-end pr-4">
-<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">restaurant</span>
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-sky-accent rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sky-medium">cruelty_free</span>
 </div>
 </div>
-<div class="text-left">
-<span class="block font-bold text-primary text-lg">5pm - 7pm</span>
-<span class="block text-gray-600 dark:text-gray-300 font-serif" data-i18n="timeline_dinner">Cena</span>
+<div class="text-left pl-2">
+  <span class="inline-block font-serif italic text-sky-medium text-sm leading-snug bg-background-light/85 dark:bg-background-dark/80 backdrop-blur-sm rounded-xl px-3 py-2 shadow-sm">&ldquo;Sigue al conejo<br/>blanco...&rdquo;</span>
 </div>
 </div>
 <div class="relative z-10 grid grid-cols-2 gap-8 items-center mb-12">
-<div class="text-right">
-<span class="block font-bold text-primary text-lg">7pm - 8pm</span>
-<span class="block text-gray-600 dark:text-gray-300 font-serif leading-tight" data-i18n="timeline_waltz" data-i18n-html="true">Gran Entrada<br/>y Vals</span>
+<div class="text-right pr-2">
+  <span class="inline-block font-serif italic text-sky-medium text-sm leading-snug bg-background-light/85 dark:bg-background-dark/80 backdrop-blur-sm rounded-xl px-3 py-2 shadow-sm">&ldquo;La locura es el<br/>inicio de la magia.&rdquo;</span>
 </div>
 <div class="text-left pl-4">
-<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">piano</span>
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-sky-accent rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sky-medium">wand_stars</span>
 </div>
 </div>
 </div>
 <div class="relative z-10 grid grid-cols-2 gap-8 items-center mb-12">
 <div class="text-right flex justify-end pr-4">
-<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">celebration</span>
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-sky-accent rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sky-medium">auto_stories</span>
 </div>
 </div>
-<div class="text-left">
-<span class="block font-bold text-primary text-lg">8pm - 9pm</span>
-<span class="block text-gray-600 dark:text-gray-300 font-serif" data-i18n="timeline_crazy">Hora Loca</span>
+<div class="text-left pl-2">
+  <span class="inline-block font-serif italic text-sky-medium text-sm leading-snug bg-background-light/85 dark:bg-background-dark/80 backdrop-blur-sm rounded-xl px-3 py-2 shadow-sm">&ldquo;Entre sombras y<br/>maravillas, comienza<br/>la historia...&rdquo;</span>
 </div>
 </div>
 <div class="relative z-10 grid grid-cols-2 gap-8 items-center">
-<div class="text-right">
-<span class="block font-bold text-primary text-lg">9pm - 12am</span>
-<span class="block text-gray-600 dark:text-gray-300 font-serif leading-tight" data-i18n="timeline_party" data-i18n-html="true">Grupo<br/>¡Que comience<br/>la fiesta!</span>
+<div class="text-right pr-2">
+  <span class="inline-block font-serif italic text-sky-medium text-sm leading-snug bg-background-light/85 dark:bg-background-dark/80 backdrop-blur-sm rounded-xl px-3 py-2 shadow-sm">&ldquo;No llegues tarde a<br/>esta fecha tan<br/>importante.&rdquo;</span>
 </div>
 <div class="text-left pl-4">
-<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">music_note</span>
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-sky-accent rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-sky-medium">timer</span>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section class="text-center bg-white dark:bg-card-dark rounded-3xl p-8 shadow-lg">
-<h3 class="font-display text-4xl text-gray-800 dark:text-gray-100 mb-2" data-i18n="dresscode_title">Código de Vestimenta</h3>
-<p class="text-lg font-serif uppercase tracking-widest text-primary mb-6" data-i18n="dresscode_formal">Formal</p>
+<!-- Dress Code -->
+<section class="text-center bg-white dark:bg-card-dark rounded-3xl p-8 shadow-lg section-rose rose-top-right">
+<h3 class="font-display text-4xl text-gray-800 dark:text-gray-100 mb-2 text-glow" data-i18n="dresscode_title">Código de Vestimenta</h3>
+<p class="text-lg font-serif uppercase tracking-widest text-sky-accent mb-6" data-i18n="dresscode_formal">Formal</p>
 <div class="flex justify-center gap-8 mb-6 text-gray-800 dark:text-gray-100">
 <span class="material-symbols-outlined text-6xl">checkroom</span>
 <span class="material-symbols-outlined text-6xl">dry_cleaning</span>
 </div>
-<div class="inline-block bg-background-light dark:bg-background-dark border border-primary/30 px-4 py-2 rounded-lg">
+<div class="inline-block bg-gray-100 dark:bg-background-dark border border-sky-accent/30 px-4 py-2 rounded-lg">
 <p class="text-sm font-serif text-gray-700 dark:text-gray-200" data-i18n="dresscode_note" data-i18n-html="true">
-                        El color <span class="text-primary font-bold">celeste</span> está reservado<br/>para la Quinceañera
+                        El color <span class="text-sky-accent font-bold">celeste</span> está reservado<br/>para la Quinceañera
                     </p>
 </div>
 </section>
-<section class="text-center">
-<h3 class="font-display text-5xl text-gray-800 dark:text-gray-100 mb-6 flex justify-center items-center gap-3">
+
+<!-- Divider 5: Cards + Roses -->
+<div class="section-divider">
+  <span class="divider-line"></span>
+  <img alt="" src="alicia/Cartas/photo_2026-02-24_15-35-45-removebg-preview.png" style="height:36px;transform:rotate(10deg);"/>
+  <img alt="" src="alicia/Rosas/pngtree-two-roses-png-image_6579333.png" style="height:44px;"/>
+  <img alt="" src="alicia/Cartas/photo_2026-02-24_15-35-45-removebg-preview.png" style="height:36px;transform:rotate(-8deg) scaleX(-1);"/>
+  <span class="divider-line"></span>
+</div>
+
+<!-- Gifts -->
+<section class="text-center section-rose rose-bottom-left">
+<h3 class="font-display text-5xl text-gray-800 dark:text-gray-100 mb-6 flex justify-center items-center gap-3 text-glow">
                     <span data-i18n="gifts_title">Regalos</span> <span class="material-icons text-3xl text-gray-600 dark:text-gray-300">card_giftcard</span>
 </h3>
 <div class="flex justify-center items-center gap-2 text-gray-700 dark:text-gray-200">
 <span class="material-symbols-outlined text-3xl">mail</span>
 <span class="font-serif italic text-lg" data-i18n="gifts_envelopes">"Lluvia de sobres"</span>
 </div>
+<div class="flex justify-center mt-4 opacity-95">
+    <img alt="Bow Decor" class="h-auto max-w-full" style="width: 30rem;" src="assets/lazo-removebg-preview.png"/>
+</div>
 </section>
-<section class="text-center pb-8">
-<h3 class="font-display text-4xl text-gray-800 dark:text-gray-100 mb-4" data-i18n="rsvp_title">Confirmar Asistencia</h3>
-<p class="font-sans text-sm text-gray-600 dark:text-gray-300 mb-6 px-4" data-i18n="rsvp_text">
+<!-- RSVP -->
+<section class="text-center bg-white/40 dark:bg-card-dark/30 backdrop-blur-sm py-10 px-6 rounded-3xl shadow-sm section-rose rose-top-left">
+<h3 class="font-display text-4xl text-gray-800 dark:text-gray-100 mb-4 text-glow" data-i18n="rsvp_title">Confirmar Asistencia</h3>
+<p class="font-sans text-sm text-gray-600 dark:text-gray-300 mb-6 max-w-xs mx-auto" data-i18n="rsvp_text">
                     Para nosotros es muy importante que nos acompañes, por favor confirmar tu asistencia.
                 </p>
-<a href="https://wa.me/5355667066?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%2015%20de%20Nair%20%Alexandra%20F0%9F%8E%89" target="_blank" class="bg-gradient-to-r from-[#D48B99] to-[#8B6B75] text-white font-serif tracking-wide py-3 px-10 rounded-full shadow-xl hover:shadow-2xl transition-transform hover:scale-105 flex items-center justify-center gap-2 mx-auto text-lg">
+<a href="https://wa.me/5355667066?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%2015%20de%20Nair%20%Alexandra%20F0%9F%8E%89" target="_blank" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-accent to-sky-medium text-white font-serif tracking-wide py-3 px-8 rounded-full shadow-xl hover:shadow-2xl transition-transform hover:scale-105 text-base">
                     <span data-i18n="rsvp_button">Confirmar asistencia</span>
                     <span class="material-icons text-sm">touch_app</span>
 </a>
 </section>
+
 </main>
-<footer class="relative text-center pb-12 pt-12 bg-gradient-to-b from-transparent to-primary/10 dark:to-primary/5">
-<div class="absolute top-0 right-8 text-primary opacity-60 animate-bounce" style="animation-duration: 3s;">
+
+<footer class="relative text-center pb-12 pt-12 bg-gradient-to-b from-transparent to-sky-accent/10 dark:to-sky-medium/5">
+<div class="absolute top-0 right-8 text-sky-accent opacity-60 animate-bounce" style="animation-duration: 3s;">
 <img alt="butterfly" class="w-8 h-8 opacity-70 dark:invert-0 filter hue-rotate-15" src="assets/butterfly.png"/>
 </div>
 <h2 class="font-display text-4xl md:text-5xl text-gray-700 dark:text-gray-200 px-6 leading-tight mb-8" data-i18n="footer_thanks" data-i18n-html="true">
                 Gracias por acompañarme en<br/>este día tan especial!
             </h2>
 <div class="w-full h-64 relative mt-8">
-<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark to-transparent z-10 h-20 bottom-0"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent z-10 h-20 bottom-0"></div>
 <img alt="Quinceañera celebration" class="w-full h-full object-cover opacity-80 dark:opacity-60" src="assets/celebration.png"/>
 </div>
 <p class="text-xs text-gray-400 dark:text-gray-500 mt-4 font-mono">Diseño de Invitación Digital</p>
 </footer>
 </div>
 
-<!-- Decorative Alice elements -->
-<div class="fixed top-4 left-2 w-20 h-20 pointer-events-none z-20 opacity-50" style="transform: rotate(-15deg);">
-  <img alt="Mad Hatter Hat" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_4_2026-02-24_13-26-55.jpg" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.4);"/>
+<!-- ===== PERMANENT CHARACTERS (always visible, very discrete) ===== -->
+<!-- Rabbit - top right -->
+<div class="fixed top-16 right-2 pointer-events-none z-20 opacity-[0.4]" style="width:75px;height:94px;">
+  <img alt="White Rabbit" class="w-full h-full object-contain drop-shadow-sm" src="alicia/Conejo/photo_2_2026-02-24_13-26-55-removebg-preview.png"/>
 </div>
-<div class="fixed bottom-32 left-2 w-16 h-16 pointer-events-none z-20 opacity-40" style="transform: rotate(10deg);">
-  <img alt="Mad Hatter Hat" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_21_2026-02-24_13-26-55.jpg" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.3);"/>
+<!-- Cheshire Cat - bottom left -->
+<div class="fixed bottom-28 left-1 pointer-events-none z-20 opacity-[0.4]" style="width:75px;height:75px;">
+  <img alt="Cheshire Cat" class="w-full h-full object-contain drop-shadow-sm" src="alicia/Gato/photo_20_2026-02-24_13-26-55-removebg-preview.png"/>
 </div>
-<div class="fixed top-1/3 right-1 w-16 h-20 pointer-events-none z-20 opacity-45" style="transform: scaleX(-1);">
-  <img alt="White Rabbit" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_2_2026-02-24_13-26-55.jpg" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.3);"/>
+<!-- Mad Hatter Hat - top left -->
+<div class="fixed top-8 left-2 pointer-events-none z-20 opacity-[0.4]" style="width:75px;height:75px;transform:rotate(-10deg);">
+  <img alt="Mad Hatter Hat" class="w-full h-full object-contain drop-shadow-sm" src="alicia/Sombrero/photo_4_2026-02-24_13-26-55-removebg-preview.png"/>
 </div>
-<div class="fixed top-2/3 right-2 w-18 h-18 pointer-events-none z-20 opacity-45" style="width:72px;height:72px;">
-  <img alt="Queen of Hearts" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_14_2026-02-24_13-26-55-removebg-preview.png" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.3);"/>
-</div>
-<div class="fixed top-1/2 left-1 w-16 h-16 pointer-events-none z-20 opacity-45" style="transform: rotate(5deg);">
-  <img alt="Cheshire Cat" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_20_2026-02-24_13-26-55-removebg-preview.png" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.3);"/>
+<!-- Queen of Hearts - bottom right -->
+<div class="fixed bottom-20 right-2 pointer-events-none z-20 opacity-[0.40]" style="width:75px;height:94px;">
+  <img alt="Queen of Hearts" class="w-full h-full object-contain drop-shadow-sm" src="alicia/Reina Corazones/photo_14_2026-02-24_13-26-55-removebg-preview.png"/>
 </div>
 
-<!-- Appearing/disappearing elements container -->
+<!-- ===== APPEARING/DISAPPEARING ELEMENTS CONTAINER ===== -->
 <div id="wonderland-flashes" class="fixed inset-0 pointer-events-none z-30 overflow-hidden"></div>
 
 <style>
   @keyframes flashIn {
     0% { opacity: 0; transform: scale(0.3) rotate(-10deg); }
-    10% { opacity: 1; transform: scale(1) rotate(0deg); }
-    85% { opacity: 1; transform: scale(1) rotate(3deg); }
+    10% { opacity: 0.7; transform: scale(1) rotate(0deg); }
+    85% { opacity: 0.7; transform: scale(1) rotate(3deg); }
     100% { opacity: 0; transform: scale(0.6) rotate(10deg); }
   }
   .wonderland-flash {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
     animation: flashIn 5s ease-in-out forwards;
-    filter: drop-shadow(0 0 6px rgba(212,139,153,0.5));
-    border-radius: 50%;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
   }
 </style>
 
 <script>
 (function() {
+  // Clocks, Cups, Cat, Butterflies, Cards - random appearing/disappearing
   var flashImages = [
-    'alicia/d71dcf66e2616215f4e0d78ba7c0f713-removebg-preview.png',
-    'alicia/photo_5_2026-02-24_13-26-55-removebg-preview.png',
-    'alicia/photo_8_2026-02-24_13-26-55-removebg-preview.png',
-    'alicia/photo_3_2026-02-24_13-26-55-removebg-preview.png',
-    'alicia/photo_9_2026-02-24_13-26-55-removebg-preview.png',
-    'alicia/photo_11_2026-02-24_13-26-55-removebg-preview.png',
-    'alicia/photo_14_2026-02-24_13-26-55-removebg-preview.png',
-    'alicia/photo_20_2026-02-24_13-26-55-removebg-preview.png',
-    'assets/rabbit-removebg-preview.png',
-    'assets/crow-removebg-preview.png',
-    'assets/gemelos-removebg-preview.png',
-    'assets/quueeen-removebg-preview.png'
+    // Relojes (Clocks)
+    'alicia/Relojes/photo_11_2026-02-24_13-26-55-removebg-preview.png',
+    'alicia/Relojes/photo_2_2026-02-24_15-35-43-removebg-preview.png',
+    'alicia/Relojes/photo_3_2026-02-24_13-26-55-removebg-preview.png',
+    'alicia/Relojes/photo_5_2026-02-24_13-26-55-removebg-preview.png',
+    'alicia/Relojes/photo_5_2026-02-24_15-35-43-removebg-preview.png',
+    'alicia/Relojes/photo_6_2026-02-24_15-35-43-removebg-preview.png',
+    'alicia/Relojes/photo_8_2026-02-24_13-26-55-removebg-preview.png',
+    'alicia/Relojes/photo_9_2026-02-24_13-26-55-removebg-preview.png',
+    'alicia/Relojes/photo_9_2026-02-24_15-35-43-removebg-preview.png',
+    // Tazas (Cups)
+    'alicia/Tazas/photo_6_2026-02-24_13-26-55-removebg-preview.png',
+    'alicia/Tazas/photo_7_2026-02-24_13-26-55-removebg-preview.png',
+    'alicia/Tazas/photo_8_2026-02-24_15-35-43-removebg-preview.png',
+    // Gato (Cat)
+    'alicia/Gato/photo_19_2026-02-24_13-26-55-removebg-preview.png',
+    'alicia/Gato/photo_20_2026-02-24_13-26-55-removebg-preview.png',
+    // Mariposa (Butterfly)
+    'alicia/Mariposa/d71dcf66e2616215f4e0d78ba7c0f713-removebg-preview.png',
+    // Cartas (Cards)
+    'alicia/Cartas/photo_2026-02-24_15-35-45-removebg-preview.png',
+    // Rosas (Roses)
+    'alicia/Rosas/photo_1_2026-02-24_15-35-43-removebg-preview.png',
+    'alicia/Rosas/pngtree-two-roses-png-image_6579333.png',
+    // Conejo (Rabbit)
+    'alicia/Conejo/photo_2_2026-02-24_13-26-55-removebg-preview.png',
+    // Sombrero (Hat)
+    'alicia/Sombrero/photo_4_2026-02-24_13-26-55-removebg-preview.png',
+    // Reina (Queen)
+    'alicia/Reina Corazones/photo_14_2026-02-24_13-26-55-removebg-preview.png',
   ];
   var container = document.getElementById('wonderland-flashes');
+
   function showFlash() {
     var src = flashImages[Math.floor(Math.random() * flashImages.length)];
     var img = document.createElement('img');
     img.src = src;
     img.className = 'wonderland-flash';
-    img.style.top = (5 + Math.random() * 75) + '%';
-    img.style.left = (5 + Math.random() * 85) + '%';
-    var size = 25 + Math.random() * 15;
+    img.style.top = (5 + Math.random() * 80) + '%';
+    img.style.left = (5 + Math.random() * 80) + '%';
+    var size = 35 + Math.random() * 20;
     img.style.width = size + 'px';
     img.style.height = size + 'px';
     container.appendChild(img);
     setTimeout(function() { img.remove(); }, 5500);
   }
+
   function spawnWave() {
-    var count = 3 + Math.floor(Math.random() * 4);
+    // Show 6-7 random elements per wave
+    var count =  9 + Math.floor(Math.random() * 2);
     for (var i = 0; i < count; i++) {
       (function(delay) {
         setTimeout(showFlash, delay);
-      })(i * (800 + Math.random() * 1500));
+      })(i * (300 + Math.random() * 600));
     }
   }
+
+  // First wave after 3s, then every 10s (5s visible + ~5s gap ≈ 10s cycle)
   setTimeout(function() {
     spawnWave();
-    setInterval(spawnWave, 15000);
+    setInterval(spawnWave, 10000);
   }, 3000);
 })();
 </script>
 
-<div id="lang-float" class="fixed bottom-6 right-6 z-40 flex gap-2" style="display:none;">
-<button onclick="switchLang('es')" id="float-es-btn" class="px-3 py-1.5 rounded-full text-sm font-semibold bg-primary text-white shadow-lg transition">ES</button>
-<button onclick="switchLang('en')" id="float-en-btn" class="px-3 py-1.5 rounded-full text-sm font-semibold bg-white/80 dark:bg-card-dark/80 text-gray-600 dark:text-gray-300 shadow-lg transition">EN</button>
+<!-- Language float buttons -->
+<div id="lang-float" class="fixed bottom-6 right-6 z-40 flex gap-3" style="display:none;">
+<button onclick="switchLang('es')" id="float-es-btn" class="px-4 py-2 rounded-full text-base font-semibold bg-sky-500 text-white shadow-lg transition transform hover:scale-110">ES</button>
+<button onclick="switchLang('en')" id="float-en-btn" class="px-4 py-2 rounded-full text-base font-semibold bg-white/80 dark:bg-card-dark/80 text-gray-600 dark:text-gray-300 shadow-lg transition transform hover:scale-110">EN</button>
 </div>
 </body></html>
