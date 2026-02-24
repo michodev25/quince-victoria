@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nair Alexandra - Mis 15 Años</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D48B99",secondary: "#8B6B75","background-light": "#FFF5F7","background-dark": "#2D1B22","card-light": "#ffffff",
+              "card-dark": "#3D2630",
+            },
+            fontFamily: {
+              display: ["'Great Vibes'", "cursive"],serif: ["'Playfair Display'", "serif"],sans: ["'Montserrat'", "sans-serif"],},
+            borderRadius: {
+              DEFAULT: "12px",
+              "arch": "100px 100px 0 0",
+            },
+            backgroundImage: {
+                'floral-pattern': "url('assets/floral_pattern.jpg')",
+            }
+          },
+        },
+      };
+    </script>
+<style>
+        .arch-mask {
+            mask-image: radial-gradient(circle at top, black 65%, transparent 100%) bottom;border-top-left-radius: 9999px;
+            border-top-right-radius: 9999px;
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }.timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #D48B99;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-gray-700 dark:text-gray-200 font-sans antialiased selection:bg-primary selection:text-white transition-colors duration-300">
+<script>
+var currentLang = 'es';
+var translations = {
+  en: {
+    overlay_title: 'My <span class="text-7xl">15th</span> Birthday',
+    overlay_tap: 'Tap to open the invitation',
+    header_title: 'My <span class="text-4xl">15th</span> Birthday',
+    event_date: 'Saturday, April 4, 2026',
+    days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds',
+    intro_text: 'By order of Her Majesty the Queen, you are respectfully invited to the solemn and distinguished celebration of the 15th birthday of Miss Nair Alexandra, who will be presented in society in a ceremony of great honor and elegance.',
+    intro_title: 'The princess\' 15th birthday.',
+    intro_blessing: 'Your honorable presence will be deeply appreciated and will add greater splendor to this most significant occasion for the honoree and her family.',
+    parents_title: 'My parents:',
+    godparents_title: 'My godparents:',
+    invite_text: 'We are pleased to invite you to be part of this great day.',
+    where_title: 'Where & Schedule',
+    where_subtitle: 'Ceremony & Reception',
+    ceremony_time: 'Event: 6:30 pm',
+    view_map: 'View Map',
+    details_title: 'Here are the details<br/>of the celebration',
+    timeline_mass: 'Mass',
+    timeline_dinner: 'Dinner',
+    timeline_waltz: 'Grand Entrance<br/>& Waltz',
+    timeline_crazy: 'Crazy Hour',
+    timeline_party: 'Band<br/>Let the party<br/>begin!',
+    afterparty: 'After the formal celebration, you are cordially invited to continue the party at our home for a more intimate gathering.<br/><strong>Address: 13201 SW 197th Ave<br/>Miami, FL 33196</strong>',
+    dresscode_title: 'Dress Code',
+    dresscode_formal: 'Formal',
+    dresscode_note: 'The color <span class="text-primary font-bold">light blue</span> is reserved<br/>for the Quinceañera',
+    gifts_title: 'Gifts',
+    gifts_envelopes: '"Cash gifts"',
+    rsvp_title: 'RSVP',
+    rsvp_text: 'It is very important to us that you join us, please confirm your attendance.',
+    rsvp_button: 'Confirm attendance',
+    footer_thanks: 'Thank you for joining me on<br/>this very special day!'
+  },
+  es: {
+    overlay_title: 'Mis <span class="text-7xl">15</span> Años',
+    overlay_tap: 'Toca para abrir la invitación',
+    header_title: 'Mis <span class="text-4xl">15</span> Años',
+    event_date: 'Sábado, 4 de abril de 2026',
+    days: 'Días', hours: 'Horas', minutes: 'Minutos', seconds: 'Segundos',
+    intro_text: 'Por orden de Su Majestad la reina, queda usted invitado respetuosamente a la solemne y distinguida celebración de los 15 años de la señorita Nair Alexandra, quien será presentada en sociedad en una ceremonia de gran honor y elegancia.',
+    intro_title: 'Los 15 de la princesa.',
+    intro_blessing: 'Su honorable presencia será profundamente apreciada y otorgará mayor realce a esta ocasión tan significativa para la homenajeada y su familia.',
+    parents_title: 'Mis padres:',
+    godparents_title: 'Mis padrinos:',
+    invite_text: 'Nos complace invitarte a ser parte de este gran día.',
+    where_title: 'Donde & Horario',
+    where_subtitle: 'Ceremonia y Recepción',
+    ceremony_time: 'Evento: 6:30 p.m.',
+    view_map: 'Ver Mapa',
+    details_title: 'Te compartimos los<br/>detalles de la celebración',
+    timeline_mass: 'Misa',
+    timeline_dinner: 'Cena',
+    timeline_waltz: 'Gran Entrada<br/>y Vals',
+    timeline_crazy: 'Hora Loca',
+    timeline_party: 'Grupo<br/>¡Que comience<br/>la fiesta!',
+    afterparty: 'Después de la celebración formal, están cordialmente invitados a continuar la fiesta en nuestra casa para un convivio más íntimo.<br/><strong>Dirección: 13201 SW 197th Ave<br/>Miami, FL 33196</strong>',
+    dresscode_title: 'Código de Vestimenta',
+    dresscode_formal: 'Formal',
+    dresscode_note: 'El color <span class="text-primary font-bold">celeste</span> está reservado<br/>para la Quinceañera',
+    gifts_title: 'Regalos',
+    gifts_envelopes: '"Lluvia de sobres"',
+    rsvp_title: 'Confirmar Asistencia',
+    rsvp_text: 'Para nosotros es muy importante que nos acompañes, por favor confirmar tu asistencia.',
+    rsvp_button: 'Confirmar asistencia',
+    footer_thanks: 'Gracias por acompañarme en<br/>este día tan especial!'
+  }
+};
+function switchLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      if (el.getAttribute('data-i18n-html') === 'true') {
+        el.innerHTML = translations[lang][key];
+      } else {
+        el.textContent = translations[lang][key];
+      }
+    }
+  });
+  var active = 'px-3 py-1 rounded-full text-sm font-semibold bg-primary text-white shadow transition';
+  var inactive = 'px-3 py-1 rounded-full text-sm font-semibold bg-white/60 dark:bg-card-dark/60 text-gray-600 dark:text-gray-300 shadow transition';
+  ['lang-es-btn','float-es-btn'].forEach(function(id) {
+    var b = document.getElementById(id); if (b) b.className = lang === 'es' ? active : inactive;
+  });
+  ['lang-en-btn','float-en-btn'].forEach(function(id) {
+    var b = document.getElementById(id); if (b) b.className = lang === 'en' ? active : inactive;
+  });
+}
+</script>
+<div id="welcome-overlay" class="fixed inset-0 z-50 bg-background-light dark:bg-background-dark flex flex-col items-center justify-center cursor-pointer" onclick="enterSite()">
+<div class="absolute top-6 right-6 flex gap-2" onclick="event.stopPropagation()">
+<button onclick="switchLang('es')" id="lang-es-btn" class="px-3 py-1 rounded-full text-sm font-semibold bg-primary text-white shadow transition">ES</button>
+<button onclick="switchLang('en')" id="lang-en-btn" class="px-3 py-1 rounded-full text-sm font-semibold bg-white/60 dark:bg-card-dark/60 text-gray-600 dark:text-gray-300 shadow transition">EN</button>
+</div>
+<h2 class="font-display text-5xl text-primary mb-4 animate-pulse" data-i18n="overlay_title" data-i18n-html="true">Mis <span class="text-7xl">15</span> Años</h2>
+<p class="font-serif text-gray-600 dark:text-gray-300 mb-8 italic">Nair Alexandra</p>
+<div class="bg-primary text-white rounded-full p-4 shadow-lg animate-bounce">
+<span class="material-icons text-4xl">play_arrow</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-4" data-i18n="overlay_tap">Toca para abrir la invitación</p>
+</div>
+<script>
+function enterSite() {
+  var overlay = document.getElementById('welcome-overlay');
+  var audio = document.getElementById('bg-music');
+  var icon = document.getElementById('play-icon');
+  overlay.style.transition = 'opacity 0.6s';
+  overlay.style.opacity = '0';
+  setTimeout(function() { overlay.remove(); }, 600);
+  audio.play().then(function() { icon.textContent = 'pause'; });
+  document.getElementById('lang-float').style.display = 'flex';
+}
+</script>
+<div class="fixed top-20 left-0 w-24 h-48 pointer-events-none z-0 opacity-40 dark:opacity-20 hidden md:block">
+<img alt="Floral decor" class="object-cover w-full h-full rounded-r-full blur-[1px]" src="assets/decor_1.png"/>
+</div>
+<div class="fixed bottom-40 right-0 w-32 h-64 pointer-events-none z-0 opacity-40 dark:opacity-20 hidden md:block">
+<img alt="Floral decor" class="object-cover w-full h-full rounded-l-full blur-[1px]" src="assets/decor_2.png"/>
+</div>
+<div class="max-w-md mx-auto relative z-10 shadow-2xl overflow-hidden bg-background-light dark:bg-background-dark min-h-screen">
+<header class="relative pt-12 pb-8 px-6 text-center">
+<div class="relative w-48 h-64 mx-auto mb-6">
+<div class="w-full h-full arch-mask overflow-hidden border-4 border-white dark:border-card-dark shadow-lg relative z-10">
+<img alt="Quinceañera in pink dress" class="w-full h-full object-cover" src="assets/quinceanera_main.png"/>
+</div>
+<div class="absolute -bottom-4 -right-4 w-16 h-16 bg-primary/20 rounded-full blur-xl z-0"></div>
+<div class="absolute -top-4 -left-4 w-16 h-16 bg-primary/20 rounded-full blur-xl z-0"></div>
+</div>
+<h2 class="text-2xl font-serif text-gray-800 dark:text-gray-100 uppercase tracking-widest mb-1 scroll-reveal" style="animation-delay: 0.2s;" data-i18n="header_title" data-i18n-html="true">Mis <span class="text-4xl font-display text-primary">15</span> Años</h2>
+<h1 class="text-6xl font-display text-primary dark:text-primary mb-6 scroll-reveal leading-tight" style="animation-delay: 0.4s;">Nair Alexandra</h1>
+<audio id="bg-music" src="assets/Alice-s-Theme-From-Alice-in-Wonderland-Soundtrack-Version.m4a" loop preload="auto"></audio>
+<div class="bg-white/50 dark:bg-card-dark/50 backdrop-blur-sm rounded-full p-3 mx-4 mb-8 flex items-center justify-between shadow-sm scroll-reveal" style="animation-delay: 0.5s;">
+<button class="text-gray-500 dark:text-gray-400 hover:text-primary" onclick="document.getElementById('bg-music').currentTime=0"><span class="material-icons">replay</span></button>
+<button class="text-gray-500 dark:text-gray-400 hover:text-primary" onclick="document.getElementById('bg-music').currentTime=Math.max(0,document.getElementById('bg-music').currentTime-10)"><span class="material-icons">skip_previous</span></button>
+<button id="play-btn" class="bg-primary text-white rounded-full p-2 shadow-md hover:bg-opacity-90 transition transform hover:scale-105" onclick="toggleMusic()">
+<span id="play-icon" class="material-icons text-2xl">play_arrow</span>
+</button>
+<button class="text-gray-500 dark:text-gray-400 hover:text-primary" onclick="document.getElementById('bg-music').currentTime=Math.min(document.getElementById('bg-music').duration,document.getElementById('bg-music').currentTime+10)"><span class="material-icons">skip_next</span></button>
+<button id="mute-btn" class="text-gray-500 dark:text-gray-400 hover:text-primary" onclick="toggleMute()"><span id="mute-icon" class="material-icons">volume_up</span></button>
+</div>
+<script>
+function toggleMusic() {
+  var audio = document.getElementById('bg-music');
+  var icon = document.getElementById('play-icon');
+  if (audio.paused) {
+    audio.play();
+    icon.textContent = 'pause';
+  } else {
+    audio.pause();
+    icon.textContent = 'play_arrow';
+  }
+}
+function toggleMute() {
+  var audio = document.getElementById('bg-music');
+  var icon = document.getElementById('mute-icon');
+  audio.muted = !audio.muted;
+  icon.textContent = audio.muted ? 'volume_off' : 'volume_up';
+}
+
+</script>
+<div class="text-center mb-10 scroll-reveal" style="animation-delay: 0.6s;">
+<span class="material-icons text-3xl mb-2 text-gray-800 dark:text-gray-200">calendar_month</span>
+<p class="font-serif italic text-lg text-gray-600 dark:text-gray-300 mb-6" data-i18n="event_date">Sábado, 4 de abril de 2026</p>
+<div class="flex justify-center gap-4 text-center text-gray-800 dark:text-gray-100 font-serif">
+<div class="flex flex-col">
+<span id="countdown-days" class="text-3xl font-bold">--</span>
+<span class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400" data-i18n="days">Días</span>
+</div>
+<span class="text-2xl pt-1">:</span>
+<div class="flex flex-col">
+<span id="countdown-hours" class="text-3xl font-bold">--</span>
+<span class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400" data-i18n="hours">Horas</span>
+</div>
+<span class="text-2xl pt-1">:</span>
+<div class="flex flex-col">
+<span id="countdown-minutes" class="text-3xl font-bold">--</span>
+<span class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400" data-i18n="minutes">Minutos</span>
+</div>
+<span class="text-2xl pt-1">:</span>
+<div class="flex flex-col text-primary">
+<span id="countdown-seconds" class="text-3xl font-bold">--</span>
+<span class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400" data-i18n="seconds">Segundos</span>
+</div>
+</div>
+<script>
+(function() {
+  const target = new Date('2026-04-04T18:30:00').getTime();
+  function update() {
+    const now = Date.now();
+    const diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('countdown-days').textContent = '00';
+      document.getElementById('countdown-hours').textContent = '00';
+      document.getElementById('countdown-minutes').textContent = '00';
+      document.getElementById('countdown-seconds').textContent = '00';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('countdown-days').textContent = String(d).padStart(2, '0');
+    document.getElementById('countdown-hours').textContent = String(h).padStart(2, '0');
+    document.getElementById('countdown-minutes').textContent = String(m).padStart(2, '0');
+    document.getElementById('countdown-seconds').textContent = String(s).padStart(2, '0');
+  }
+  update();
+  setInterval(update, 1000);
+})();
+</script>
+</div>
+</header>
+<main class="px-6 space-y-16 pb-20">
+<section class="text-center relative">
+<span class="material-icons absolute -top-4 right-4 text-primary opacity-60 transform rotate-12">filter_vintage</span>
+<p class="font-sans text-sm md:text-base leading-relaxed text-gray-600 dark:text-gray-300 mb-4 px-4" data-i18n="intro_text">
+                    Por orden de Su Majestad la reina, queda usted invitado respetuosamente a la solemne y distinguida celebración de los 15 años de la señorita Nair Alexandra, quien será presentada en sociedad en una ceremonia de gran honor y elegancia.
+                </p>
+<h3 class="font-display text-4xl text-primary dark:text-primary mb-6" data-i18n="intro_title">Los 15 de la princesa.</h3>
+<p class="font-serif italic text-lg text-gray-700 dark:text-gray-200 px-2" data-i18n="intro_blessing">
+                    Su honorable presencia será profundamente apreciada y otorgará mayor realce a esta ocasión tan significativa para la homenajeada y su familia.
+                </p>
+</section>
+<section class="text-center space-y-8 bg-white/40 dark:bg-card-dark/30 py-8 rounded-3xl backdrop-blur-sm shadow-sm">
+<div>
+<h4 class="font-display text-3xl text-primary dark:text-primary mb-3" data-i18n="parents_title">Mis padres:</h4>
+<p class="font-serif text-gray-800 dark:text-gray-100">Paola Bodden &amp; Fabian Velasquez</p>
+<p class="font-serif text-gray-600 dark:text-gray-400 text-sm mt-1">Jose Carrera</p>
+</div>
+<div>
+<h4 class="font-display text-3xl text-primary dark:text-primary mb-3" data-i18n="godparents_title">Mis padrinos:</h4>
+<p class="font-serif text-gray-800 dark:text-gray-100">Adriana Ayala,</p>
+<p class="font-serif text-gray-800 dark:text-gray-100">Mario &amp; America De Santiago</p>
+</div>
+<div class="pt-4">
+<p class="font-display text-3xl text-gray-700 dark:text-gray-200 transform -rotate-2" data-i18n="invite_text">
+                        La familia real esta complacida de invitarte a ser parte de este gran día.
+                    </p>
+</div>
+<div class="flex justify-center opacity-50">
+<img alt="decoration" class="w-16 h-auto opacity-30 dark:invert" src="assets/decoration_small.png"/>
+</div>
+</section>
+<section class="text-center">
+<h3 class="font-display text-5xl text-gray-800 dark:text-gray-100 mb-2" data-i18n="where_title">Donde &amp; Horario</h3>
+<p class="font-serif italic text-gray-600 dark:text-gray-400 mb-8" data-i18n="where_subtitle">Recepción y Ceremonia Religiosa</p>
+<div class="bg-white dark:bg-card-dark p-6 rounded-2xl shadow-lg border border-primary/20 relative overflow-hidden group">
+<div class="mb-4 text-gray-800 dark:text-gray-100">
+<span class="material-symbols-outlined text-6xl font-light">home</span>
+</div>
+<h4 class="font-serif font-bold text-lg text-gray-800 dark:text-white">Tipsi Place</h4>
+<p class="text-gray-600 dark:text-gray-300 mt-1">13201 SW 197th Ave</p>
+<p class="text-gray-600 dark:text-gray-300">Miami, FL 33196</p>
+<div class="mt-4 flex justify-center gap-4 text-sm font-medium text-primary">
+<span data-i18n="ceremony_time">Evento: 6:30 p.m.</span>
+</div>
+<a class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-[#D48B99] to-[#C07A88] text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1" href="https://www.google.com/maps/search/?api=1&query=Tipsi+Place+13201+SW+197th+Ave+Miami+FL+33196" target="_blank">
+<span data-i18n="view_map">Ver Mapa</span>
+<span class="material-icons text-sm">near_me</span>
+</a>
+</div>
+</section>
+<section class="text-center">
+<h3 class="font-serif text-2xl text-gray-800 dark:text-gray-100 mb-8" data-i18n="details_title" data-i18n-html="true">Te compartimos los<br/>detalles de la celebración</h3>
+<div class="relative py-4 timeline-line">
+<div class="relative z-10 grid grid-cols-2 gap-8 items-center mb-12">
+<div class="text-right">
+<span class="block font-bold text-primary text-lg">3pm - 4pm</span>
+<span class="block text-gray-600 dark:text-gray-300 font-serif" data-i18n="timeline_mass">Misa</span>
+</div>
+<div class="text-left pl-4">
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">church</span>
+</div>
+</div>
+</div>
+<div class="relative z-10 grid grid-cols-2 gap-8 items-center mb-12">
+<div class="text-right flex justify-end pr-4">
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+</div>
+</div>
+<div class="text-left">
+<span class="block font-bold text-primary text-lg">5pm - 7pm</span>
+<span class="block text-gray-600 dark:text-gray-300 font-serif" data-i18n="timeline_dinner">Cena</span>
+</div>
+</div>
+<div class="relative z-10 grid grid-cols-2 gap-8 items-center mb-12">
+<div class="text-right">
+<span class="block font-bold text-primary text-lg">7pm - 8pm</span>
+<span class="block text-gray-600 dark:text-gray-300 font-serif leading-tight" data-i18n="timeline_waltz" data-i18n-html="true">Gran Entrada<br/>y Vals</span>
+</div>
+<div class="text-left pl-4">
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">piano</span>
+</div>
+</div>
+</div>
+<div class="relative z-10 grid grid-cols-2 gap-8 items-center mb-12">
+<div class="text-right flex justify-end pr-4">
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">celebration</span>
+</div>
+</div>
+<div class="text-left">
+<span class="block font-bold text-primary text-lg">8pm - 9pm</span>
+<span class="block text-gray-600 dark:text-gray-300 font-serif" data-i18n="timeline_crazy">Hora Loca</span>
+</div>
+</div>
+<div class="relative z-10 grid grid-cols-2 gap-8 items-center">
+<div class="text-right">
+<span class="block font-bold text-primary text-lg">9pm - 12am</span>
+<span class="block text-gray-600 dark:text-gray-300 font-serif leading-tight" data-i18n="timeline_party" data-i18n-html="true">Grupo<br/>¡Que comience<br/>la fiesta!</span>
+</div>
+<div class="text-left pl-4">
+<div class="w-12 h-12 bg-background-light dark:bg-background-dark border-2 border-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">music_note</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="text-center bg-white dark:bg-card-dark rounded-3xl p-8 shadow-lg">
+<h3 class="font-display text-4xl text-gray-800 dark:text-gray-100 mb-2" data-i18n="dresscode_title">Código de Vestimenta</h3>
+<p class="text-lg font-serif uppercase tracking-widest text-primary mb-6" data-i18n="dresscode_formal">Formal</p>
+<div class="flex justify-center gap-8 mb-6 text-gray-800 dark:text-gray-100">
+<span class="material-symbols-outlined text-6xl">checkroom</span>
+<span class="material-symbols-outlined text-6xl">dry_cleaning</span>
+</div>
+<div class="inline-block bg-background-light dark:bg-background-dark border border-primary/30 px-4 py-2 rounded-lg">
+<p class="text-sm font-serif text-gray-700 dark:text-gray-200" data-i18n="dresscode_note" data-i18n-html="true">
+                        El color <span class="text-primary font-bold">celeste</span> está reservado<br/>para la Quinceañera
+                    </p>
+</div>
+</section>
+<section class="text-center">
+<h3 class="font-display text-5xl text-gray-800 dark:text-gray-100 mb-6 flex justify-center items-center gap-3">
+                    <span data-i18n="gifts_title">Regalos</span> <span class="material-icons text-3xl text-gray-600 dark:text-gray-300">card_giftcard</span>
+</h3>
+<div class="flex justify-center items-center gap-2 text-gray-700 dark:text-gray-200">
+<span class="material-symbols-outlined text-3xl">mail</span>
+<span class="font-serif italic text-lg" data-i18n="gifts_envelopes">"Lluvia de sobres"</span>
+</div>
+</section>
+<section class="text-center pb-8">
+<h3 class="font-display text-4xl text-gray-800 dark:text-gray-100 mb-4" data-i18n="rsvp_title">Confirmar Asistencia</h3>
+<p class="font-sans text-sm text-gray-600 dark:text-gray-300 mb-6 px-4" data-i18n="rsvp_text">
+                    Para nosotros es muy importante que nos acompañes, por favor confirmar tu asistencia.
+                </p>
+<a href="https://wa.me/5355667066?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%2015%20de%20Nair%20%Alexandra%20F0%9F%8E%89" target="_blank" class="bg-gradient-to-r from-[#D48B99] to-[#8B6B75] text-white font-serif tracking-wide py-3 px-10 rounded-full shadow-xl hover:shadow-2xl transition-transform hover:scale-105 flex items-center justify-center gap-2 mx-auto text-lg">
+                    <span data-i18n="rsvp_button">Confirmar asistencia</span>
+                    <span class="material-icons text-sm">touch_app</span>
+</a>
+</section>
+</main>
+<footer class="relative text-center pb-12 pt-12 bg-gradient-to-b from-transparent to-primary/10 dark:to-primary/5">
+<div class="absolute top-0 right-8 text-primary opacity-60 animate-bounce" style="animation-duration: 3s;">
+<img alt="butterfly" class="w-8 h-8 opacity-70 dark:invert-0 filter hue-rotate-15" src="assets/butterfly.png"/>
+</div>
+<h2 class="font-display text-4xl md:text-5xl text-gray-700 dark:text-gray-200 px-6 leading-tight mb-8" data-i18n="footer_thanks" data-i18n-html="true">
+                Gracias por acompañarme en<br/>este día tan especial!
+            </h2>
+<div class="w-full h-64 relative mt-8">
+<div class="absolute inset-0 bg-gradient-to-t from-white dark:from-background-dark to-transparent z-10 h-20 bottom-0"></div>
+<img alt="Quinceañera celebration" class="w-full h-full object-cover opacity-80 dark:opacity-60" src="assets/celebration.png"/>
+</div>
+<p class="text-xs text-gray-400 dark:text-gray-500 mt-4 font-mono">Diseño de Invitación Digital</p>
+</footer>
+</div>
+
+<!-- Decorative Alice elements -->
+<div class="fixed top-4 left-2 w-20 h-20 pointer-events-none z-20 opacity-50" style="transform: rotate(-15deg);">
+  <img alt="Mad Hatter Hat" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_4_2026-02-24_13-26-55.jpg" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.4);"/>
+</div>
+<div class="fixed bottom-32 left-2 w-16 h-16 pointer-events-none z-20 opacity-40" style="transform: rotate(10deg);">
+  <img alt="Mad Hatter Hat" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_21_2026-02-24_13-26-55.jpg" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.3);"/>
+</div>
+<div class="fixed top-1/3 right-1 w-16 h-20 pointer-events-none z-20 opacity-45" style="transform: scaleX(-1);">
+  <img alt="White Rabbit" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_2_2026-02-24_13-26-55.jpg" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.3);"/>
+</div>
+<div class="fixed top-2/3 right-2 w-18 h-18 pointer-events-none z-20 opacity-45" style="width:72px;height:72px;">
+  <img alt="Queen of Hearts" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_14_2026-02-24_13-26-55-removebg-preview.png" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.3);"/>
+</div>
+<div class="fixed top-1/2 left-1 w-16 h-16 pointer-events-none z-20 opacity-45" style="transform: rotate(5deg);">
+  <img alt="Cheshire Cat" class="w-full h-full object-contain drop-shadow-lg" src="alicia/photo_20_2026-02-24_13-26-55-removebg-preview.png" style="border-radius: 50%; border: 2px solid rgba(212,139,153,0.3);"/>
+</div>
+
+<!-- Appearing/disappearing elements container -->
+<div id="wonderland-flashes" class="fixed inset-0 pointer-events-none z-30 overflow-hidden"></div>
+
+<style>
+  @keyframes flashIn {
+    0% { opacity: 0; transform: scale(0.3) rotate(-10deg); }
+    10% { opacity: 1; transform: scale(1) rotate(0deg); }
+    85% { opacity: 1; transform: scale(1) rotate(3deg); }
+    100% { opacity: 0; transform: scale(0.6) rotate(10deg); }
+  }
+  .wonderland-flash {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    animation: flashIn 5s ease-in-out forwards;
+    filter: drop-shadow(0 0 6px rgba(212,139,153,0.5));
+    border-radius: 50%;
+  }
+</style>
+
+<script>
+(function() {
+  var flashImages = [
+    'alicia/d71dcf66e2616215f4e0d78ba7c0f713.jpg',
+    'alicia/d71dcf66e2616215f4e0d78ba7c0f713.jpg',
+    'alicia/photo_5_2026-02-24_13-26-55.jpg',
+    'alicia/photo_8_2026-02-24_13-26-55.jpg',
+    'alicia/photo_3_2026-02-24_13-26-55.jpg',
+    'alicia/photo_9_2026-02-24_13-26-55.jpg',
+    'alicia/photo_10_2026-02-24_13-26-55.jpg'
+  ];
+  var container = document.getElementById('wonderland-flashes');
+  function showFlash() {
+    var src = flashImages[Math.floor(Math.random() * flashImages.length)];
+    var img = document.createElement('img');
+    img.src = src;
+    img.className = 'wonderland-flash';
+    img.style.top = (5 + Math.random() * 75) + '%';
+    img.style.left = (5 + Math.random() * 85) + '%';
+    var size = 25 + Math.random() * 15;
+    img.style.width = size + 'px';
+    img.style.height = size + 'px';
+    container.appendChild(img);
+    setTimeout(function() { img.remove(); }, 5500);
+  }
+  function spawnWave() {
+    var count = 3 + Math.floor(Math.random() * 4);
+    for (var i = 0; i < count; i++) {
+      (function(delay) {
+        setTimeout(showFlash, delay);
+      })(i * (800 + Math.random() * 1500));
+    }
+  }
+  setTimeout(function() {
+    spawnWave();
+    setInterval(spawnWave, 15000);
+  }, 3000);
+})();
+</script>
+
+<div id="lang-float" class="fixed bottom-6 right-6 z-40 flex gap-2" style="display:none;">
+<button onclick="switchLang('es')" id="float-es-btn" class="px-3 py-1.5 rounded-full text-sm font-semibold bg-primary text-white shadow-lg transition">ES</button>
+<button onclick="switchLang('en')" id="float-en-btn" class="px-3 py-1.5 rounded-full text-sm font-semibold bg-white/80 dark:bg-card-dark/80 text-gray-600 dark:text-gray-300 shadow-lg transition">EN</button>
+</div>
+</body></html>
