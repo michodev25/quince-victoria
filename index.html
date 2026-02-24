@@ -606,14 +606,6 @@ function toggleMute() {
     // Cartas (Cards)
     'alicia/Cartas/photo_2026-02-24_15-35-45-removebg-preview.png',
     // Rosas (Roses)
-    'alicia/Rosas/photo_1_2026-02-24_15-35-43-removebg-preview.png',
-    'alicia/Rosas/pngtree-two-roses-png-image_6579333.png',
-    // Conejo (Rabbit)
-    'alicia/Conejo/photo_2_2026-02-24_13-26-55-removebg-preview.png',
-    // Sombrero (Hat)
-    'alicia/Sombrero/photo_4_2026-02-24_13-26-55-removebg-preview.png',
-    // Reina (Queen)
-    'alicia/Reina Corazones/photo_14_2026-02-24_13-26-55-removebg-preview.png',
   ];
   var container = document.getElementById('wonderland-flashes');
 
@@ -633,7 +625,7 @@ function toggleMute() {
 
   function spawnWave() {
     // Show 6-7 random elements per wave
-    var count =  9 + Math.floor(Math.random() * 2);
+    var count =  4 + Math.floor(Math.random() * 2);
     for (var i = 0; i < count; i++) {
       (function(delay) {
         setTimeout(showFlash, delay);
